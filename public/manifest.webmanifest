@@ -1,6 +1,6 @@
 {
     "name": "Progressive Budget PWA",
-    "short_name": "Progressive Budget",
+    "short_name": "Budget Tracker",
     "icons": [
     {
         "src": "icons/icon-192x192.png",
@@ -13,8 +13,9 @@
         "type": "image/png"
     }
     ],
-    "theme_color": "#dddddd",
-    "background_color": "#dddddd",
     "start_url": "/",
-    "display": "standalone"
+    "background_color": "#dddddd",
+    "display": "standalone",
+    "theme_color": "#dddddd"
+    
 }
