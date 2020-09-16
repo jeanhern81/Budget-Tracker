@@ -37,12 +37,12 @@ function checkDatabase() {
   // open a transaction on your pending db
 const transaction = db.transaction(["budget"], "readwrite");
   // access your pending object store
-const budgetStore = transaction.objectStore("pending");
+const budgetStore = transaction.objectStore("budget");
   // get all records from store and set to a variable
 const getRequest = budgetStore.getAll();
 
-getAll.onsuccess = function() {
-    if (getAll.result.length > 0) {
+getRequest.onsuccess = function() {
+    if (getRequest.result.length > 0) {
         fetch("/api/transaction/bulk", {
         method: "POST",
         body: JSON.stringify(getRequest.result),
